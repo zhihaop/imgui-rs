@@ -25,7 +25,7 @@ bitflags! {
         /// Return true even if an active item is blocking access to this window
         const ALLOW_WHEN_BLOCKED_BY_ACTIVE_ITEM = sys::ImGuiHoveredFlags_AllowWhenBlockedByActiveItem;
         /// Test from root window, and return true if any child is hovered
-        const ROOT_AND_CHILD_WINDOWS = Self::ROOT_WINDOW.bits | Self::CHILD_WINDOWS.bits;
+        const ROOT_AND_CHILD_WINDOWS = Self::ROOT_WINDOW.bits() | Self::CHILD_WINDOWS.bits();
     }
 }
 
@@ -40,13 +40,14 @@ bitflags! {
         /// Return true if any window is focused
         const ANY_WINDOW = sys::ImGuiFocusedFlags_AnyWindow;
         /// Test from root window, and return true if any child is focused
-        const ROOT_AND_CHILD_WINDOWS = Self::ROOT_WINDOW.bits | Self::CHILD_WINDOWS.bits;
+        const ROOT_AND_CHILD_WINDOWS = Self::ROOT_WINDOW.bits() | Self::CHILD_WINDOWS.bits();
     }
 }
 
 bitflags! {
     /// Configuration flags for windows
     #[repr(transparent)]
+    #[derive(Copy, Clone, Eq, PartialEq, Debug)]
     pub struct WindowFlags: u32 {
         /// Disable the title bar
         const NO_TITLE_BAR = sys::ImGuiWindowFlags_NoTitleBar;

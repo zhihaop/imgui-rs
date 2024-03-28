@@ -9,9 +9,9 @@ license = "MIT OR Apache-2.0"
 publish = false
 
 [dev-dependencies]
-copypasta = "0.8"
-glium = { version = "0.33.0", default-features = true }
-image = "0.23"
+copypasta = "0.10.1"
+glium = { version = "0.34.0", default-features = true }
+image = { version = "0.25.0", features = ["jpeg"] }
 imgui = { path = "../imgui", features = ["tables-api"] }
 imgui-glium-renderer = { path = "../imgui-glium-renderer" }
 imgui-winit-support = { path = "../imgui-winit-support" }

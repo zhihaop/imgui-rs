@@ -110,6 +110,7 @@ pub enum ColorPreview {
 bitflags! {
     /// Color edit flags
     #[repr(transparent)]
+    #[derive(Copy, Clone, Eq, PartialEq, Debug)]
     pub struct ColorEditFlags: u32 {
         /// ColorEdit, ColorPicker, ColorButton: ignore Alpha component (read only 3 components of
         /// the value).

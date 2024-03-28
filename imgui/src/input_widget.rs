@@ -11,6 +11,7 @@ use crate::Ui;
 bitflags!(
     /// Flags for text inputs
     #[repr(C)]
+    #[derive(Copy, Clone, Eq, PartialEq, Debug)]
     pub struct InputTextFlags: u32 {
         /// Allow 0123456789.+-*/
         const CHARS_DECIMAL = sys::ImGuiInputTextFlags_CharsDecimal;

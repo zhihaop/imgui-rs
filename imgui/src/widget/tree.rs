@@ -8,6 +8,7 @@ use crate::{Condition, Ui};
 bitflags!(
     /// Flags for tree nodes
     #[repr(transparent)]
+    #[derive(Copy, Clone, Eq, PartialEq, Debug)]
     pub struct TreeNodeFlags: u32 {
         /// Draw as selected
         const SELECTED = sys::ImGuiTreeNodeFlags_Selected;

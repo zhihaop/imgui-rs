@@ -33,6 +33,7 @@ pub enum ComboBoxPreviewMode {
 bitflags!(
 /// Flags for combo boxes
 #[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Debug)]
 pub struct ComboBoxFlags: u32 {
     /// Align the popup toward the left by default
     const POPUP_ALIGN_LEFT = sys::ImGuiComboFlags_PopupAlignLeft;

@@ -9,7 +9,8 @@ use std::{io::Cursor, num::NonZeroU32, time::Instant};
 
 use glow::HasContext;
 use glutin::surface::GlSurface;
-use image::{jpeg::JpegDecoder, ImageDecoder};
+use image::ImageDecoder;
+use image::codecs::jpeg::JpegDecoder;
 use imgui::Condition;
 
 use imgui_glow_renderer::Renderer;

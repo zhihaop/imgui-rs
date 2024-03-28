@@ -31,6 +31,7 @@ bitflags! {
     ///      If you specify a value for `inner_width` then effectively the scrolling space is known and [Stretch] or mixed [Fixed]/[Stretch] columns become meaningful again.
     /// - Read on documentation at the top of imgui_tables.cpp for more details.
     #[repr(transparent)]
+    #[derive(Copy, Clone, Eq, PartialEq, Debug)]
     pub struct TableFlags: u32 {
         // Features
 
@@ -161,7 +162,7 @@ bitflags! {
 bitflags! {
     /// Flags for [TableColumnSetup] and [table_setup_column_with].
     #[repr(transparent)]
-    #[derive(Default)]
+    #[derive(Copy, Clone, Eq, PartialEq, Debug, Default)]
     pub struct TableColumnFlags: u32 {
         // Input configuration flags
 

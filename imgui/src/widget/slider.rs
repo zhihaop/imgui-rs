@@ -9,6 +9,7 @@ use crate::Ui;
 bitflags!(
     /// Flags for sliders
     #[repr(transparent)]
+    #[derive(Copy, Clone, Eq, PartialEq, Debug)]
     pub struct SliderFlags: u32 {
         /// Clamp value to min/max bounds when input manually with CTRL+Click.
         ///

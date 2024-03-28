@@ -7,6 +7,7 @@ use crate::Ui;
 bitflags!(
     /// Flags for selectables
     #[repr(transparent)]
+    #[derive(Copy, Clone, Eq, PartialEq, Debug)]
     pub struct SelectableFlags: u32 {
         /// Clicking this don't close parent popup window
         const DONT_CLOSE_POPUPS = sys::ImGuiSelectableFlags_DontClosePopups;

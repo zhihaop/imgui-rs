@@ -9,7 +9,7 @@ use glium::{
     uniforms::{MagnifySamplerFilter, MinifySamplerFilter, SamplerBehavior},
     Texture2d,
 };
-use image::{jpeg::JpegDecoder, ImageDecoder};
+use image::{codecs::jpeg::JpegDecoder, ImageDecoder};
 use imgui::*;
 use imgui_glium_renderer::Texture;
 
